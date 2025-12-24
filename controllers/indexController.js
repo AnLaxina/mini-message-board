@@ -1,3 +1,5 @@
+import messages from "../models/messages.js";
+
 export function displayView(req, res) {
-    res.send("Hello! This is the first page!");
+    res.render("index", { messages: messages });
 }
