@@ -1,6 +1,7 @@
 import Express from "express";
 import path from "node:path";
 import indexRouter from "./routes/indexRouter.js";
+import newMessageRouter from "./routes/newMessageRouter.js";
 
 const app = Express();
 const __dirname = import.meta.dirname;
@@ -8,7 +9,8 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 // Routes
-app.use(indexRouter);
+app.use("/", indexRouter);
+app.use("/new", newMessageRouter);
 
 const PORT = 3000;
 app.listen(PORT, (error) => {
