@@ -1,3 +1,3 @@
 export function displayView(req, res) {
-    res.send("Chicken time!");
+    res.render("newMessage");
 }
