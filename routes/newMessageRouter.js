@@ -4,6 +4,11 @@ import * as newMessageController from "../controllers/newMessageController.js";
 const newMessageRouter = Router();
 
 newMessageRouter.get("/", newMessageController.displayView);
-newMessageRouter.post("/", newMessageController.retrieveForm);
+newMessageRouter.post(
+    "/",
+    newMessageController.retrieveForm,
+    newMessageController.changeMessageOrder,
+    newMessageController.redirectHome
+);
 
 export default newMessageRouter;
