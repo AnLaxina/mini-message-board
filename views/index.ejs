@@ -10,6 +10,9 @@
         <main>
             <p>Here are the messages:</p>
             <%- include("messages", {messages: messages}) %>
+            <button type="button" onclick="window.location.href='/new'">
+                Add new message
+            </button>
         </main>
     </body>
 </html>
