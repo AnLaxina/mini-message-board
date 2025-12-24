@@ -1,0 +1,14 @@
+form,
+.new-message-container,
+.message-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.name-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}

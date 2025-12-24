@@ -1,0 +1,4 @@
+/* This is just for having ONE CSS file import everything. That way we don't need to include/clutter the head
+    of each HTML document
+*/
+@import url("./newMessage.css");

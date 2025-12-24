@@ -4,17 +4,29 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>New Message</title>
+
+        <link rel="stylesheet" href="/css/index.css" />
     </head>
     <body>
-        <h1>New Message</h1>
-        <form action="/new" method="post">
-            <label for="userName">Name: </label>
-            <input id="userName" name="userName" type="text" required />
-
-            <label for="message">Message:</label>
-            <textarea name="message" id="message" required></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
+        <div class="new-message-container">
+            <h1>New Message</h1>
+            <form action="/new" method="post">
+                <div class="name-container">
+                    <label for="userName">Name: </label>
+                    <input id="userName" name="userName" type="text" required />
+                </div>
+                <div class="message-container">
+                    <label for="message">Message:</label>
+                    <textarea
+                        name="message"
+                        id="message"
+                        rows="15"
+                        cols="45"
+                        required
+                    ></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </body>
 </html>
