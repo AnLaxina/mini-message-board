@@ -17,3 +17,9 @@ form,
     padding: 1.2rem;
     font-size: 1rem;
 }
+
+@media (width <= 640px) {
+    body {
+        justify-content: center;
+    }
+}

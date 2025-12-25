@@ -3,6 +3,12 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 main {
@@ -12,4 +18,22 @@ main {
 main > button {
     padding: 1.2rem;
     font-size: 1rem;
+}
+
+.messages {
+    background-color: rgb(181, 205, 228);
+    box-sizing: border-box;
+    padding: 1rem;
+    max-height: 65vh;
+    max-width: 50vw;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: white rgb(107, 122, 136);
+}
+
+@media (width <= 640px) {
+    .messages {
+        max-height: 75vh;
+        max-width: 65vw;
+    }
 }
