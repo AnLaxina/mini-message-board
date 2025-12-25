@@ -2,6 +2,7 @@ import Express from "express";
 import path from "node:path";
 import indexRouter from "./routes/indexRouter.js";
 import newMessageRouter from "./routes/newMessageRouter.js";
+import detailedMessageRouter from "./routes/detailedMessageRouter.js";
 
 const app = Express();
 const __dirname = import.meta.dirname;
@@ -17,6 +18,7 @@ app.use(Express.urlencoded({ extended: true }));
 // Routes
 app.use("/", indexRouter);
 app.use("/new", newMessageRouter);
+app.use("/detailedMessage", detailedMessageRouter);
 
 const PORT = 3000;
 app.listen(PORT, (error) => {

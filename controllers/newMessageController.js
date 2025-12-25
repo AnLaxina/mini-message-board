@@ -8,6 +8,7 @@ export function retrieveForm(req, res, next) {
     messages.push({
         text: req.body.message,
         user: req.body.userName,
+        userId: messages.length + 1,
         added: new Date(),
     });
 
@@ -22,4 +23,8 @@ export function changeMessageOrder(req, res, next) {
 
 export function redirectHome(req, res) {
     res.redirect("/");
+}
+
+export function redirectDetailedMessage(req, res) {
+    res.redirect(`/detailedMessage/${req.body.userName}/${req.body.message}`);
 }
