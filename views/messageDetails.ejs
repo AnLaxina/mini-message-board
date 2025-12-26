@@ -4,11 +4,24 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Message by <%=messageDetails.user%></title>
+
+        <style>
+            .message-details {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        </style>
     </head>
     <body>
-        <h1>Message Details</h1>
-        <p><strong>Author:</strong><%=messageDetails.user%></p>
-        <p><strong>Message</strong></p>
-        <p><%=messageDetails.text%></p>
+        <div class="message-details">
+            <h1>Message Details</h1>
+            <p><strong>Author:</strong><%=messageDetails.user%></p>
+            <p><strong>Message</strong></p>
+            <p><%=messageDetails.text%></p>
+            <button type="button" onclick="window.location.href='/'">
+                Go Back
+            </button>
+        </div>
     </body>
 </html>
