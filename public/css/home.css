@@ -21,6 +21,10 @@ main > button {
 }
 
 .messages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
     background-color: rgb(181, 205, 228);
     box-sizing: border-box;
     padding: 1rem;
@@ -29,6 +33,13 @@ main > button {
     overflow: auto;
     scrollbar-width: thin;
     scrollbar-color: white rgb(107, 122, 136);
+}
+
+.message {
+    background-color: white;
+    padding: 0.5rem;
+    border: 3px black solid;
+    border-radius: 15px;
 }
 
 @media (width <= 640px) {
