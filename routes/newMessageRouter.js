@@ -6,8 +6,7 @@ const newMessageRouter = Router();
 newMessageRouter.get("/", newMessageController.displayView);
 newMessageRouter.post(
     "/",
-    newMessageController.retrieveForm,
-    newMessageController.changeMessageOrder,
+    newMessageController.addNewMessage,
     newMessageController.redirectHome
 );
 
