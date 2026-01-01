@@ -16,7 +16,10 @@ const SQL = `CREATE TABLE IF NOT EXISTS messages(
     username VARCHAR(255),
     text TEXT,
     added TIMESTAMPTZ
-    );`;
+    );
+    
+    INSERT INTO messages (username, text, added) VALUES ('Amando', 'Hi there!', NOW());
+    INSERT INTO messages (username, text, added) VALUES ('Charles', 'Hello World!', NOW());`;
 await client.connect();
 await client.query(SQL);
 await client.end();
