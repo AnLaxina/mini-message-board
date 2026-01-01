@@ -10,6 +10,12 @@ export async function createMessage(username, text, added = new Date()) {
     await pool.query(query, [username, text, added]);
 }
 
+export async function getMessage(usernameid) {
+    const query = `SELECT * FROM messages WHERE usernameid = $1`;
+    const { rows } = await pool.query(query, [usernameid]);
+    return rows[0];
+}
+
 export async function deleteMessage(usernameid) {
     const query = `DELETE FROM messages
                 WHERE usernameid = $1`;
@@ -17,6 +23,7 @@ export async function deleteMessage(usernameid) {
     await pool.query(query, [usernameid]);
 }
 
-console.log(await getAllMessages());
+// console.log(await getAllMessages());
 // console.log(await createMessage("Chicken", "Doggy"));
 // console.log(await deleteMessage(3));
+console.log(await getMessage(1));
