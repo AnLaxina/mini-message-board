@@ -3,6 +3,7 @@ import path from "node:path";
 import indexRouter from "./routes/indexRouter.js";
 import newMessageRouter from "./routes/newMessageRouter.js";
 import detailedMessageRouter from "./routes/detailedMessageRouter.js";
+import "dotenv/config.js";
 
 const app = Express();
 const __dirname = import.meta.dirname;
