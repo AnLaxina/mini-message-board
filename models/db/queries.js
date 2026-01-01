@@ -22,8 +22,3 @@ export async function deleteMessage(usernameid) {
 
     await pool.query(query, [usernameid]);
 }
-
-// console.log(await getAllMessages());
-// console.log(await createMessage("Chicken", "Doggy"));
-// console.log(await deleteMessage(3));
-console.log(await getMessage(1));
