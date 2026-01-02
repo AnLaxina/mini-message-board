@@ -1,23 +1,12 @@
 import messages from "../models/messages.js";
+import * as db from "../models/db/queries.js";
 
 export function displayView(req, res) {
     res.render("newMessage");
 }
 
-export function retrieveForm(req, res, next) {
-    messages.push({
-        text: req.body.message,
-        user: req.body.userName,
-        userId: messages.length + 1,
-        added: new Date(),
-    });
-
-    next();
-}
-
-export function changeMessageOrder(req, res, next) {
-    messages.sort((firstMsg, secondMsg) => secondMsg.added - firstMsg.added);
-
+export function addNewMessage(req, res, next) {
+    db.createMessage(req.body.userName, req.body.message);
     next();
 }
 

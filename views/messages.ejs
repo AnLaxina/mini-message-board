@@ -1,13 +1,11 @@
 <div class="messages">
-    <p>The length of messages is <%= messages.length %></p>
-
     <% for (const message of messages) {%>
     <div class="message">
-        <p><strong><%=message.user %></strong></p>
+        <p><strong><%=message.username %></strong></p>
         <p><%=message.text %></p>
         <strong>Created on: </strong>
         <time datetime="YYYY-MM-DDTHH:mm:ss.sssZ"><%=message.added%></time>
-        <a href="/detailedMessage/<%=message.userId%>">Details</a>
+        <a href="/detailedMessage/<%=message.usernameid%>">Details</a>
     </div>
 
     <% } %>

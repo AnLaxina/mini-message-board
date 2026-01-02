@@ -1,9 +1,7 @@
-import messages from "../models/messages.js";
+import * as db from "../models/db/queries.js";
 
-export function displayView(req, res) {
+export async function displayView(req, res) {
     const { userId } = req.params;
-    const message = messages.find(
-        (message) => message.userId === Number(userId)
-    );
+    const message = await db.getMessage(userId);
     res.render("messageDetails", { messageDetails: message });
 }

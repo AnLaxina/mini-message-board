@@ -10,7 +10,7 @@
     <body>
         <h1>Messages</h1>
         <main>
-            <p>Here are the messages:</p>
+            <p>There are <%=messages.length%> messages:</p>
             <%- include("messages", {messages: messages}) %>
             <button type="button" onclick="window.location.href='/new'">
                 Add new message
